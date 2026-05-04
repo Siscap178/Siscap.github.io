@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios Públicos - San Juan Sacatepéquez</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #1f2d3d;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00c9a7;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,123,255,0.6)),
+    url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    animation: fadeIn 1.5s;
+}
+
+.hero p {
+    margin-top: 15px;
+    font-size: 1.2em;
+    animation: fadeIn 2.5s;
+}
+
+.btn {
+    margin-top: 25px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #00c9a7;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00a387;
+}
+
+/* CONTENT */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.section {
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.6s;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section h2 {
+    margin-bottom: 15px;
+    color: #1f2d3d;
+    border-left: 5px solid #00c9a7;
+    padding-left: 10px;
+}
+
+.section p {
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* FOOTER */
+footer {
+    background: #1f2d3d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#salud">Salud</a>
+    <a href="#seguridad">Seguridad</a>
+    <a href="#educacion">Educación</a>
+    <a href="#conclusion">Conclusión</a>
+</nav>
+
+<section class="hero" id="inicio">
+    <h1>San Juan Sacatepéquez</h1>
+    <p>Servicios de Salud, Seguridad y Educación</p>
+    <button class="btn" onclick="document.getElementById('salud').scrollIntoView()">Leer información</button>
+</section>
+
+<div class="container">
+
+    <div class="section visible">
+        <h2>Introducción</h2>
+        <p>
+        El municipio de San Juan Sacatepéquez, ubicado en el departamento de Guatemala, cuenta con diversos servicios públicos fundamentales para el bienestar de su población. Entre los más importantes se encuentran los servicios de salud, seguridad y educación, los cuales contribuyen directamente al desarrollo social, económico y humano del municipio.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2 id="salud">Salud</h2>
+        <p>
+        En el ámbito de la salud, los servicios son proporcionados principalmente por el Ministerio de Salud Pública y Asistencia Social y el Instituto Guatemalteco de Seguridad Social (IGSS). El municipio dispone de centros de salud tipo “B” y varios puestos de salud distribuidos en distintas comunidades, con el objetivo de garantizar el acceso a la atención médica básica. Estos establecimientos ofrecen servicios como consultas generales, programas de vacunación, control prenatal, atención infantil y prevención de enfermedades. Asimismo, se desarrollan campañas de salud dirigidas a mejorar las condiciones sanitarias de la población.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2 id="seguridad">Seguridad</h2>
+        <p>
+        En relación con la seguridad ciudadana, esta es atendida principalmente por la Policía Nacional Civil (PNC), en coordinación con autoridades municipales y organizaciones comunitarias. La presencia de las fuerzas de seguridad permite la prevención de hechos delictivos y contribuye a mantener el orden público dentro del municipio. Además, se promueven programas de participación comunitaria enfocados en la prevención de la violencia y el fortalecimiento de la convivencia pacífica entre los habitantes.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2 id="educacion">Educación</h2>
+        <p>
+        Por otra parte, el servicio de educación en San Juan Sacatepéquez está conformado por establecimientos públicos en los niveles preprimario, primario, básico y diversificado. Estos centros educativos brindan acceso a la formación académica de niños y jóvenes del municipio. Asimismo, existen instituciones que apoyan el desarrollo educativo mediante programas de fortalecimiento escolar y capacitación. La educación constituye un pilar fundamental para el progreso de la población, ya que permite mejorar las oportunidades laborales y el desarrollo personal de los estudiantes.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2 id="conclusion">Conclusión</h2>
+        <p>
+        La municipalidad de San Juan Sacatepéquez también desempeña un papel importante en el fortalecimiento de estos servicios, mediante la gestión de proyectos comunitarios, mantenimiento de infraestructura y coordinación con entidades gubernamentales. A través de estas acciones, se busca garantizar el acceso equitativo a los servicios básicos y mejorar la calidad de vida de los habitantes del municipio.
+        <br><br>
+        En conclusión, los servicios de salud, seguridad y educación representan elementos esenciales para el desarrollo integral de San Juan Sacatepéquez. Su adecuado funcionamiento permite atender las necesidades básicas de la población, promover la estabilidad social y fomentar el crecimiento del municipio. Por ello, resulta fundamental la participación conjunta de las autoridades y la comunidad en el fortalecimiento y conservación de dichos servicios.
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    <p>Trabajo escolar | Servicios Públicos | 2026</p>
+</footer>
+
+<script>
+// ANIMACIÓN SCROLL
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < window.innerHeight - 50) {
+            sec.classList.add('visible');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
